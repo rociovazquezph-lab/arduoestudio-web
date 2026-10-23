@@ -269,12 +269,12 @@
 
   .case-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:2px;
     background:var(--line);
     border:1px solid var(--line);
   }
-  @media (max-width:900px){ .case-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:1100px){ .case-grid{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:640px){ .case-grid{grid-template-columns:1fr;} }
 
   .case{
@@ -290,6 +290,8 @@
     position:relative;
     overflow:hidden;
   }
+  .case-visual img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;}
+  .case-visual:has(img)::after{content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.45), transparent 40%);}
   .case-visual .file-no{
     position:absolute; top:12px; left:14px;
     font-family:'Montserrat', sans-serif;
@@ -484,35 +486,13 @@
         <div class="eyebrow">Trabajos</div>
         <h2>Con quién<br>venimos trabajando</h2>
       </div>
-      <div class="work-count">06 marcas — San Rafael, Mendoza</div>
+      <div class="work-count">04 marcas — San Rafael, Mendoza</div>
     </div>
 
     <div class="case-grid">
 
-      <a class="case reveal" href="https://www.instagram.com/tommysegura.co" target="_blank" rel="noopener">
-        <div class="case-visual v-tommy"><span class="file-no">EXP. 01</span></div>
-        <div class="case-body">
-          <div class="case-niche">Coaching ontológico</div>
-          <h3>Tommy Segura</h3>
-          <p>Reels, carruseles e historias sobre autoconocimiento, emoción y propósito. Landing page en desarrollo.</p>
-          <div class="case-tags"><span>Contenido</span><span>Landing</span></div>
-          <span class="case-link">Ver Instagram <span class="arrow">→</span></span>
-        </div>
-      </a>
-
-      <a class="case reveal" href="#" target="_blank" rel="noopener">
-        <div class="case-visual v-nati"><span class="file-no">EXP. 02</span></div>
-        <div class="case-body">
-          <div class="case-niche">Seguros</div>
-          <h3>Nati Fornes</h3>
-          <p>Simulaciones dramatizadas de siniestros hogareños para concientizar sobre coberturas. Primera campaña de Meta Ads en curso.</p>
-          <div class="case-tags"><span>Contenido</span><span>Meta Ads</span></div>
-          <span class="case-link">Ver Instagram <span class="arrow">→</span></span>
-        </div>
-      </a>
-
-      <a class="case reveal" href="#" target="_blank" rel="noopener">
-        <div class="case-visual v-troyano"><span class="file-no">EXP. 03</span></div>
+      <a class="case reveal" href="https://www.instagram.com/metalurgicatroyano" target="_blank" rel="noopener">
+        <div class="case-visual v-troyano"><img src="troyano.png" alt="Metalúrgica Troyano" loading="lazy"><span class="file-no">EXP. 01</span></div>
         <div class="case-body">
           <div class="case-niche">Metalurgia — 50+ años</div>
           <h3>Metalúrgica Troyano</h3>
@@ -522,8 +502,8 @@
         </div>
       </a>
 
-      <a class="case reveal" href="#" target="_blank" rel="noopener">
-        <div class="case-visual v-mtm"><span class="file-no">EXP. 04</span></div>
+      <a class="case reveal" href="https://www.instagram.com/mtmferreteria.sr" target="_blank" rel="noopener">
+        <div class="case-visual v-mtm"><img src="mtm.jpg" alt="MTM Ferretería" loading="lazy"><span class="file-no">EXP. 02</span></div>
         <div class="case-body">
           <div class="case-niche">Ferretería</div>
           <h3>MTM Ferretería</h3>
@@ -533,8 +513,8 @@
         </div>
       </a>
 
-      <a class="case reveal" href="#" target="_blank" rel="noopener">
-        <div class="case-visual v-cfmoto"><span class="file-no">EXP. 05</span></div>
+      <a class="case reveal" href="https://www.instagram.com/cfmoto_sanrafael" target="_blank" rel="noopener">
+        <div class="case-visual v-cfmoto"><img src="cfmoto.jpg" alt="CF Moto San Rafael" loading="lazy"><span class="file-no">EXP. 03</span></div>
         <div class="case-body">
           <div class="case-niche">Concesionario oficial CF Moto</div>
           <h3>CF Moto San Rafael</h3>
@@ -545,7 +525,7 @@
       </a>
 
       <a class="case reveal" href="https://www.instagram.com/anicetosbarf" target="_blank" rel="noopener">
-        <div class="case-visual v-anicetos"><span class="file-no">EXP. 06</span></div>
+        <div class="case-visual v-anicetos"><img src="anicetos.jpg" alt="Anicetos" loading="lazy"><span class="file-no">EXP. 04</span></div>
         <div class="case-body">
           <div class="case-niche">Alimentación BARF para mascotas</div>
           <h3>Anicetos</h3>
